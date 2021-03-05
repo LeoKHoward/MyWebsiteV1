@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GYM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">HOME</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">ABOUT</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="work.html">WORK</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="gym.html">GYM</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="food.html">FOOD</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="music.html">MUSIC</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="movies.html">MOVIES</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="travel.html">TRAVEL</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <ul class="sm_icons">
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/therealleohoward/"><img src="social media logos/instagram.svg"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/leo.howard.7374/"><img src="social media logos/facebook.svg"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/LeoKHoward"><img src="social media logos/github.svg"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/leo-howard-b1b76474/"><img src="social media logos/linkedin.svg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="gym_photos/me_recent.jpg" style="width:100%" alt="">
+            <div class="slideshow-item-text">Me Most Recent</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="gym_photos/me_latest.jpg" style="width:100%" alt="">
+            <div class="slideshow-item-text">Me In Autumn</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="gym_photos/me_ripped.jpg" style="width:100%" alt="">
+            <div class="slideshow-item-text">Me Ripped</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="gym_photos/me_old.jpg" style="width:100%" alt="">
+            <div class="slideshow-item-text">Me Normal</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+
+
+
+</body>
+
+
+</html>
